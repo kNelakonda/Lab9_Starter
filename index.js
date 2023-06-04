@@ -6,6 +6,7 @@ let form = document.querySelector('form');
     let secondNum = document.querySelector('#second-num').value;
     let operator = document.querySelector('#operator').value;
     output.innerHTML = eval(`${firstNum} ${operator} ${secondNum}`);
+
 });
 
 let errorBtns = Array.from(document.querySelectorAll('#error-btns > button'));
@@ -100,11 +101,11 @@ errorBtns[14].addEventListener("click", () =>{
 
         } catch(err) {
             console.error("you had an undefined function, see why", err);
-            throw new CalculationError("Some characters are not numbers");
             
             
         } finally {
             console.log("make sure you only use numbers in the calculator");
+            throw new CalculationError("Some characters are not numbers");
         }
 })
 
@@ -116,8 +117,7 @@ class CalculationError extends Error {
 }
 
 window.onerror = function(message, url, lineNum, columnNum, error){
-    console.log("there was an error at line: ", lineNum, "and column:", columnNum);
-    //alert("an error occured");
+    console.log("there was an error at line:", lineNum, "and column:", columnNum);
 };
 
 TrackJS.track('Testing TrackJS!');

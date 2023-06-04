@@ -1,3 +1,3 @@
 # Lab 9 - Starter
 
-https://github.com/kNelakonda/Lab9_Starter
+https://knelakonda.github.io/Lab9_Starter/ 
