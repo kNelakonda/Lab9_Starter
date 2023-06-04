@@ -102,6 +102,7 @@ errorBtns[14].addEventListener("click", () =>{
             console.error("you had an undefined function, see why", err);
             throw new CalculationError("Some characters are not numbers");
             
+            
         } finally {
             console.log("make sure you only use numbers in the calculator");
         }
@@ -116,7 +117,7 @@ class CalculationError extends Error {
 
 window.onerror = function(message, url, lineNum, columnNum, error){
     console.log("there was an error at line: ", lineNum, "and column:", columnNum);
-    alert("an error occured");
+    //alert("an error occured");
 };
 
 TrackJS.track('Testing TrackJS!');
