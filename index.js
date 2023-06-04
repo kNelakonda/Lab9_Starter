@@ -101,19 +101,22 @@ errorBtns[14].addEventListener("click", () =>{
         } catch(err) {
             console.error("you had an undefined function, see why", err);
             
-            
         } finally {
             console.log("make sure you only use numbers in the calculator");
-            throw new CalculationError("Some characters are not numbers");
         }
 })
 
-class CalculationError extends Error {
+class ButtonError extends Error {
     constructor(message){
         super(message);
-        this.name = "Calculation Error";
+        this.name = "Button Error";
     }
 }
+
+errorBtns[15].addEventListener("click", ()=>{
+    boom();
+    throw new ButtonError("I told you not to click this button!");
+});
 
 window.onerror = function(message, url, lineNum, columnNum, error){
     console.log("there was an error at line:", lineNum, "and column:", columnNum);

@@ -49,12 +49,12 @@
   </style>
 <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
 <script>
-  window.TrackJS && TrackJS.install({ 
-    token: "5a09279087f0487db6394fab2a40c614"
+  TrackJS.install({
+    token: "5a09279087f0487db6394fab2a40c614",
+    application: "lab9"
     // for more configuration options, see https://docs.trackjs.com
   });
-</script>
-                        
+</script>        
                           
 </head>
 
@@ -95,6 +95,7 @@
       <button>End Timer</button>
       <button>Console Trace</button>
       <button>Trigger a Global Error</button>
+      <button>Don't click this button</button>
     </section>
   </main>
   <script src="index.js"></script>
