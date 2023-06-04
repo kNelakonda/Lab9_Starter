@@ -119,4 +119,5 @@ window.onerror = function(message, url, lineNum, columnNum, error){
     alert("an error occured");
 };
 
-TrackJS.track("Testing TrackJS!");
+TrackJS.track('Testing TrackJS!');
+                        
