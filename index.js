@@ -93,7 +93,6 @@ function third(){
 }
 
 errorBtns[14].addEventListener("click", () =>{
-    
         try{
             let firstInput = document.querySelector("#first-num");
             let secondInput = document.querySelector("#second-num");
@@ -118,6 +117,8 @@ class CalculationError extends Error {
 
 window.onerror = function(message, url, lineNum, columnNum, error){
     console.log("there was an error at line:", lineNum, "and column:", columnNum);
+    console.log(error);
+    console.log(message, url);
 };
 
 TrackJS.track('Testing TrackJS!');
